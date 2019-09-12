@@ -1,0 +1,311 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 0.1em;
+}
+
+img {
+    width: 100%; 
+    margin: 0;
+}
+
+/* -------------- fil d'Ariane -------------- */
+
+#breadcrumb-nav {
+    margin-bottom: 1em;
+}
+
+#breadcrumb-nav .breadcrumb {
+    background-color: white;
+    font-size: 0.8rem;
+}
+
+#breadcrumb-nav .breadcrumb .breadcrumb-item a {
+    color: #777;
+    font-weight: bold;    
+}
+
+/* ------------ page accueil.php ------------ */
+
+main h1.accueil_title {
+    font-size: 2rem;
+}
+
+main h1 em {
+    font-style: italic; 
+}
+
+main h2.accueil_subTitle {
+    font-size: 1.5rem;
+    margin: 0.5em 0 0.5em 0;
+}
+
+main section.article p {
+    text-align: justify;
+    color: #444;
+    line-height: 1.5em;
+}
+
+/* ---------- page inscription.php ---------- */
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0 5em 0; 
+    /* border: solid 1px orange; */        
+}    
+
+form legend,
+.title_page {
+    text-align: center;
+    margin-bottom: 0.8em;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    color: rgb(235, 235, 235);
+    text-shadow: 2px 2px 1px green;
+}  
+
+form div.enter_datas {
+    /* border: solid 1px green; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form div.enter_datas input {
+    padding-left: 0.2em;
+    border-radius: 5px;   
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+form div.enter_datas div#civility_datas {
+    margin-bottom: 0.5em;
+} 
+
+form div.enter_datas div#civility_datas,
+form div.enter_datas div#contact_datas {
+    display: flex;
+    justify-content: center;
+} 
+
+form fieldset button#btn_send_datas {
+    /* border: solid 1px cyan; */
+    display: block;
+    margin: 1em auto;
+    padding: 0.3em;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+}
+
+form fieldset button#btn_send_datas:hover {
+    cursor: pointer;
+}
+
+/* ---------- page listeAdherents.php ---------- */
+
+#adherentsList {
+    padding: 0 3em 3em 3em;
+}
+
+.title_page {
+    margin-top: 0.8em;
+}
+
+/* .btn-displayDataSubmit,
+.btn-group {
+    margin-bottom: 1em;
+} */
+
+#adherentsSort_btn,
+.btn-displayDataSubmit,
+.btn-noSort,
+#adherentsList_item thead tr th {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#adherentsSort_btn {
+    display: initial;
+}
+
+#adherentsSort_btn .dropdown-menu.show {
+    border: solid #92C7FF 1px;
+    box-shadow: 1px 1px 5px silver;
+    width: 11em;
+}
+
+#adherentsSort_btn .btn-group .dropdown-menu a {
+color: rgb(2, 99, 245);
+} 
+
+#adherentsSort_btn .btn-group .dropdown-menu a:hover {
+    color: rgb(2, 38, 92);
+    font-weight: bold;
+} 
+
+.btn-noSort {
+    margin-left: 0.3em;
+}
+
+#adherentsList_item thead {
+    line-height: 4em;
+}
+
+#adherentsList_item thead tr th {
+    width: calc(100%/6);
+    font-weight: bold;
+    text-align: center;
+}
+
+#adherentsList_item tbody tr {
+    line-height: 1.5em;    
+}
+
+/* Couleur grise une ligne sur deux */
+#adherentsList_item tbody tr:nth-child(2n) {
+    color: gray;    
+}
+
+#adherentsList_item tbody tr td {
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    letter-spacing: 0.3em;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+/* ________________ footer ________________ */
+
+footer.navbar {
+    display: flex;   
+    justify-content: center;
+    font-size: 0.8em; 
+}
+
+/* _____________ media Queries ____________ */
+
+@media (max-width: 1199px){
+    section.article img {
+        width: 50%;
+        margin: auto;
+        border-radius: 10%;
+        -webkit-border-radius: 10%;
+        -moz-border-radius: 10%;
+        -ms-border-radius: 10%;
+        -o-border-radius: 10%;
+    }
+
+    section.article_1 img.photoArticle1 {
+        margin-top: 0.5em;
+    }
+
+    section.article_2 img.photoArticle2 {
+        margin-bottom: 0.5em;
+    }
+}
+
+@media (max-width: 991px) { 
+
+    header nav .searchBarre {
+        display: inline-grid;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    header nav ul.nav {
+        font-size: 0.8em;
+        font-family: sans-serif;
+    }
+
+    header nav .searchBarre input {
+        text-align: right;
+        padding: 0.1em;
+    }
+
+    header nav .searchBarre .btn-outline-success {
+        display: inline-block;
+        width: 3em;
+        margin: 2px auto;
+        padding: 0.2em;
+    }
+
+    /* On cache la colonne 'Age' */
+    main #adherentsList_item th.hidden,
+    main #adherentsList_item td.hidden {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    
+    header nav.navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    header nav .searchBarre { 
+        display: inline-flex;
+        margin-top: 0.3em;
+    }    
+
+    header nav .searchBarre input {
+        text-align: left;        
+    }
+
+    form #civility_datas,
+    form #contact_datas {
+        flex-wrap:wrap;
+    }
+
+    form #civility_datas input,
+    form #contact_datas input {
+        margin-top: 0.5em;
+    }
+
+    /* On cache les colonnes 'Age' et 'Email' */
+    main #adherentsList_item th.hidden,
+    main #adherentsList_item td.hidden,
+    main #adherentsList_item th.hiddenBis,
+    main #adherentsList_item td.hiddenBis {
+        display: none;
+    }
+
+    footer section.nav {
+        flex-direction: column; 
+    }
+}
+
+@media (max-width: 575px) {
+    
+    header nav .searchBarre  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 490px) {
+    
+    header nav.navbar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header ul.nav {
+        flex-direction: column;
+    }
+
+    header nav.navbar li {
+        text-align: center;
+    }
+}
+
+@media (max-width: 444px) {
+    form div.enter_datas div#civility_datas {
+        margin-bottom: 0;
+    }
+}
