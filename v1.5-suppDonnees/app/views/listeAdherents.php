@@ -37,7 +37,7 @@
             <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liste de tri</button>
             <!-- 
                 Menu de selection d'un tri du bouton.
-                Envoi en GET dans l'URL via l'attribut 'href', une info qui permet de selectionner un tri.
+                Envoi en GET dans l'URL via l'attribut 'href', une chaîne de requête après le ? qui permet de selectionner un tri.
             -->
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                 <!-- Après le nom du fichier, "?order=...." tri par l'attribut 'name' de la balise input -->
@@ -84,9 +84,8 @@
                     <td>
                         <!-- https://jeanbaptistemarie.com/notes/code/php/recuperer-les-valeurs-des-checkbox-avec-php.html -->
                         <form action="../Controllers/AdherentListDelete_ctrl.php" method="POST">
-                            <input type="checkbox" name="deleteAdherentList[]" value="<?= $currentRow['id']; ?>"/> 
-                            <!-- <input type="submit" class="btnDeleteRow btn btn-warning" value="supfirepr" data-toggle="modal" data-target="#exampleModal" href="modalDatasSubmit.php"/> -->
-                            <button type="button"  class="btnDeleteRow btn btn-warning" data-toggle="modal" data-target="#exampleModal">suppr</button>
+                            <input type="checkbox" name="deleteAdherentList[]" value="<?= $currentRow['id']; ?>"/>     
+                            <button type="button"  class="btnDeleteRow btn btn-warning" data-toggle="modal" data-target="#exampleModal">suppr</button>             
 
                             <!-- vue de la fenêtre modal -->
                             <?php require __DIR__.'/modalConfirmAdherentDelete.php'; ?>
@@ -96,9 +95,9 @@
                     <!-- l'attribut 'title' permet d'avoir une info au survol du nom -->
                     <td title="<?= $currentRow['age'].' ans '.' / '.'email : '.$currentRow['email']; ?>"><?= $currentRow['familyname']; ?></td>
                     <td><?= $currentRow['firstname']; ?></td>
-                    <!-- La classe 'hidden' permettra de cacher les colonnes via le CSS -->
+                    <!-- La classe 'hidden' permettra de cacher les colonnes via le CSS en fonction des mediaQueries -->
                     <td class="hidden"><?= $currentRow['age']; ?></td>
-                    <td class="hiddenBis"><?= $currentRow['email']; ?></td>
+                    <td class="hiddenBis"><?= $currentRow['email']; ?></td>                    
                 </tr>
             <?php endforeach; ?>
         </tbody>

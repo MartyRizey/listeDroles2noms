@@ -13,8 +13,7 @@
             <div class="modal-body">
 
                 <div class="modal_item">
-                    <p style="color: rgb(2, 82, 134)"></p>
-                    <p class="modal_item-data">&#10151; Vous avez supprimé l'entrée <?= $currentRow['id']; ?>.</p>
+                    <p class="modal_item-data">&#10151; L'entrée à l'ID <strong><?= $currentRow['id']; ?></strong> a été supprimée.<br></p>
                 </div>                
                                 
             </div>

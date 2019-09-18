@@ -82,52 +82,55 @@
 #Structure des fichiers de l'arborescence
 
 fichier `point d'entrée` : 
->*public/__index.php__*
- I. *app/views/__accueil.php__*  
-
->*app/views/__accueil.php__*
- require........| *app/views/templates/__doctype-tpl.php__*
- require........| *app/views/templates/__header-tpl.php__*
- ...................................................... require : *app/inc/__nav_path.php__* `(navigation)`
- require........| *app/inc/__breacrumb.php__* `(fil d'Ariane)`
- require........| *app/views/templates/__breadcrumb-tpl.php__* `(affichage, fil d'Ariane)`
- require........| *app/views/templates/__footer-tpl.php__*  
-
->*app/views/__inscription.php__*
- require........| *app/views/templates/__doctype-tpl.php__*
- require........| *app/views/templates/__header-tpl.php__*
- ...................................................... require : *app/inc/__nav_path.php__* `(navigation)`
- require........| *app/inc/__breacrumb.php__* `(fil d'Ariane)`
- require........| *app/inc/__nav_path.php__*
-    - L'attribut *action* de la balise *form*, renvoi vers : *app/Controllers/__DatasForm_ctrl.php__*
-    ..................................................................................................... require : *app/inc/__nav_path.php__*
-     ..................................................................................................... require : *app/Models/__insertDatasBdd_sql.php__*
-     ....................................................................................................................................... require : *app/Models/__connexBdd.php__*
- ....................................................................................................................................... require : *app/Models/__paramConnexBdd.php__*
- require........| *app/views/templates/__breadcrumb-tpl.php__* `(affichage, fil d'Ariane)`
- require........| *app/views/templates/__footer-tpl.php__*  
-
->*app/views/__listeAdherents.php__*  
- require........| *app/views/templates/__doctype-tpl.php__*
- require........| *app/views/templates/__header-tpl.php__*
- ...................................................... require : *app/inc/__nav_path.php__* `(navigation)`
- require........| *app/inc/__breacrumb.php__* `(fil d'Ariane)`
- require........| *app/Controllers/__AdherentListSort_ctrl.php__* `(affichage selon un tri de la liste d'adhérents via 2 boutons)`
- ............................................. require : *app/Models/__selectTable_sql.php__*
- ............................................................................... require : *app/Models/__connexBdd.php__*
- ................................................................................................................. require : *app/Models/__paramConnexBdd.php__*
- ............................................. require : *app/Models/__selectSortTable_sql.php__*
- ............................................................................... require : *app/Models/__connexBdd.php__*
- ................................................................................................................. require : *app/Models/__paramConnexBdd.php__*
- require........| *app/views/templates/__breadcrumb-tpl.php__* `(affichage, fil d'Ariane)`
- require........| *app/views/__modalDatasSubmit.php__* `(affichage d'une fenêtre type 'modal' via un bouton)`
- require........| *app/views/templates/__footer-tpl.php__*  
+> public/__index.php__
+ &#9205; *app/views/__accueil.php__*  
+---
+> app/views/__accueil.php__
+ &#9205; *app/views/templates/__doctype-tpl.php__*
+ &#9205; *app/views/templates/__header-tpl.php__*
+ .. &#9205; *app/inc/__nav_path.php__* `(navigation)`
+ &#9205; *app/inc/__breacrumb.php__* `(fil d'Ariane)`
+ &#9205; *app/views/templates/__breadcrumb-tpl.php__* `(affichage, fil d'Ariane)`
+ &#9205; *app/views/templates/__footer-tpl.php__*  
+---
+> app/views/__inscription.php__
+ &#9205; *app/views/templates/__doctype-tpl.php__*
+ &#9205; *app/views/templates/__header-tpl.php__*
+ .. &#9205; *app/inc/__nav_path.php__* `(navigation)`
+ &#9205; *app/inc/__breacrumb.php__* `(fil d'Ariane)`
+ &#9205; *app/inc/__nav_path.php__*
+```
+- L'attribut *action* de la balise *form*, renvoi vers : 
+  > app/Controllers/DatasForm_ctrl.php
+    .. app/inc/nav_path.php
+    .. app/Models/insertDatasBdd_sql.php
+    ..... app/Models/connexBdd.php
+    ........ app/Models/paramConnexBdd.php
+```
+> &#9205; *app/views/templates/__breadcrumb-tpl.php__* `(affichage, fil d'Ariane)`
+  &#9205; *app/views/templates/__footer-tpl.php__*
+---
+> app/views/__listeAdherents.php__ 
+ &#9205; *app/views/templates/__doctype-tpl.php__*
+ &#9205; *app/views/templates/__header-tpl.php__*
+ .. &#9205; *app/inc/__nav_path.php__* `(navigation)`
+ &#9205; *app/inc/__breacrumb.php__* `(fil d'Ariane)`
+ &#9205; *app/Controllers/__AdherentListSort_ctrl.php__* `(affichage selon un tri de la liste d'adhérents via 2 boutons)`
+ .. &#9205; *app/Models/__selectTable_sql.php__*
+ ..... &#9205; *app/Models/__connexBdd.php__*
+ ........ &#9205; *app/Models/__paramConnexBdd.php__*
+ .. &#9205; *app/Models/__selectSortTable_sql.php__*
+..... &#9205; *app/Models/__connexBdd.php__*
+ ........ &#9205; *app/Models/__paramConnexBdd.php__*
+ &#9205; *app/views/templates/__breadcrumb-tpl.php__* `(affichage, fil d'Ariane)`
+ &#9205; *app/views/__modalDatasSubmit.php__* `(affichage d'une fenêtre type 'modal' via un bouton)`
+ &#9205; *app/views/templates/__footer-tpl.php__*  
 
 >*app/views/__contact.php__*  
- require........| *app/views/templates/__doctype-tpl.php__*
- require........| *app/views/templates/__header-tpl.php__*
- ...................................................... require : *app/inc/__nav_path.php__* `(navigation)`
- require........| *app/views/templates/__footer-tpl.php__*
+ &#9205; *app/views/templates/__doctype-tpl.php__*
+ &#9205; *app/views/templates/__header-tpl.php__*
+ .. &#9205; *app/inc/__nav_path.php__* `(navigation)`
+ &#9205; *app/views/templates/__footer-tpl.php__*
 
 
 

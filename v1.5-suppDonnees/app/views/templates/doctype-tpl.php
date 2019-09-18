@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
     <!-- reset CSS -->
-    <link rel="stylesheet" href="http://localhost/programmation/repos_github/droleDeNom/v1.5-suppDonnees/public/assets/css/reset.css">
+    <link rel="stylesheet" href="http://localhost/programmation/repos_github/listeDroles2noms/v1.5-suppDonnees/public/assets/css/reset.css">
     <!-- ../../public/assets/css/style.css -->
-    <link rel="stylesheet" href="http://localhost/programmation/repos_github/droleDeNom/v1.5-suppDonnees/public/assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/programmation/repos_github/listeDroles2noms/v1.5-suppDonnees/public/assets/css/style.css">
 </head>
 <body>  
